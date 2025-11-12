@@ -1,3 +1,20 @@
+:root {
+  --spa-cream: #F5F1E8;
+  --spa-sage: #A8B5A0;
+  --spa-olive: #7A8B6F;
+  --spa-forest: #4A5D4A;
+  --spa-charcoal: #2C3531;
+  --spa-gold: #C9A961;
+  --spa-rose: #D4A5A5;
+  --spa-white: #FFFFFF;
+  --spa-light-sage: #D4E0D0;
+}
+
+body {
+  background: var(--spa-cream);
+  color: var(--spa-charcoal);
+}
+
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -6,8 +23,11 @@
 
 h1 {
   text-align: center;
-  color: #646cff;
+  color: var(--spa-forest);
   margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .booking-container {
@@ -18,15 +38,18 @@ h1 {
 }
 
 .booking-form {
-  background: #1a1a1a;
+  background: var(--spa-white);
   padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(74, 93, 74, 0.1);
 }
 
 .booking-form h2 {
   margin-top: 0;
-  color: #646cff;
+  color: var(--spa-forest);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group {
@@ -36,60 +59,74 @@ h1 {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--spa-forest);
   font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #333;
-  border-radius: 4px;
-  background: #242424;
-  color: #fff;
+  padding: 0.875rem;
+  border: 2px solid var(--spa-light-sage);
+  border-radius: 8px;
+  background: var(--spa-cream);
+  color: var(--spa-charcoal);
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #646cff;
+  border-color: var(--spa-sage);
+  background: var(--spa-white);
+  box-shadow: 0 0 0 3px rgba(168, 181, 160, 0.1);
 }
 
 .book-btn {
   width: 100%;
-  padding: 0.75rem;
-  background: #646cff;
-  color: white;
+  padding: 1rem;
+  background: var(--spa-olive);
+  color: var(--spa-white);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .book-btn:hover {
-  background: #535bf2;
+  background: var(--spa-forest);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 93, 74, 0.3);
 }
 
 .bookings-list {
-  background: #1a1a1a;
+  background: var(--spa-white);
   padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(74, 93, 74, 0.1);
 }
 
 .bookings-list h2 {
   margin-top: 0;
-  color: #646cff;
+  color: var(--spa-forest);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .no-bookings {
   text-align: center;
-  color: #888;
+  color: var(--spa-sage);
   padding: 2rem;
+  font-style: italic;
 }
 
 .bookings {
@@ -102,40 +139,57 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #242424;
-  border-radius: 4px;
-  border: 1px solid #333;
+  padding: 1.25rem;
+  background: var(--spa-cream);
+  border-radius: 12px;
+  border: 2px solid var(--spa-light-sage);
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover {
+  border-color: var(--spa-sage);
+  box-shadow: 0 2px 8px rgba(74, 93, 74, 0.1);
 }
 
 .booking-info strong {
   display: block;
-  color: #fff;
+  color: var(--spa-forest);
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .booking-info p {
   margin: 0.25rem 0;
-  color: #888;
+  color: var(--spa-olive);
   font-size: 0.9rem;
 }
 
 .delete-btn {
-  padding: 0.5rem 1rem;
-  background: #ff4444;
-  color: white;
+  padding: 0.625rem 1.25rem;
+  background: var(--spa-rose);
+  color: var(--spa-white);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
 }
 
 .delete-btn:hover {
-  background: #cc0000;
+  background: #C08585;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 165, 165, 0.3);
 }
 
 @media (max-width: 768px) {
   .booking-container {
     grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
   }
 }
